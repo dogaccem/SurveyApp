@@ -8,7 +8,7 @@ namespace SurveyApp.Model.QuestionInfo
 {
     public class Question
     {
-        
+
 
         public string Description { get; private set; }
         public QuestionType QuestionType { get; private set; }
@@ -20,9 +20,11 @@ namespace SurveyApp.Model.QuestionInfo
             QuestionType = questionType;
         }
 
-        public void virtual AddAnswer()
+        public void addQ()
         {
 
         }
+
     }
+        
 }
