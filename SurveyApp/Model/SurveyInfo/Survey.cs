@@ -34,20 +34,20 @@ namespace SurveyApp.Model.SurveyInfo
         {
             if(Questions.Count < NumberOfQuestions)
             {
-                var isSame = Questions.Any(x => x.Description == question.Description && x.QuestionType == question.QuestionType);
+                var isSame = Questions.Any(x => x.Description == question.Description);
                 if (!isSame)
                 {
                     _questions.Add(question);
                 }
                 else
                 {
-                    throw new Exception("Aynı türde ve aynı adda bir soru girilemez.");
+                    throw new Exception("Aynı soru girişi yapılmıştır. Tekrar Deneyiniz");
                 }
                 
             }
             else
             {
-                throw new Exception("Bu anketteki belirlenen soru adetini geçemezsiniz.");
+                throw new Exception("Belirlenen soru sayısı geçilmiştir. Daha fazla soru girişi yapılammaz");
             }
             
         }
